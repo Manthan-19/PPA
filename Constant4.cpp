@@ -1,0 +1,36 @@
+#include<iostream>
+using namespace std;
+
+class Demo
+{
+	public:
+		int i;
+		const int j;
+		
+		Demo() : j(20)		//Member initialization
+		{
+			i = 10;
+			//j = 20;
+		}
+		
+		Demo(int a,int b) : i(a),j(b)
+		{
+			cout<<"Inside parameterized constructor\n";
+			b++;
+			cout<<b<<"\n";
+		}
+};
+
+int main()
+{
+	Demo obj(11,21);
+	
+	cout<<obj.i<<endl;
+	cout<<obj.j<<endl;
+	
+	obj.i++;
+	cout<<obj.i<<endl;
+	cout<<obj.j<<endl;
+	
+	return 0;
+}
